@@ -30,7 +30,6 @@ namespace TestAPI
             services.AddOptions();
             services.AddMemoryCache();
             services.Configure<IpRateLimitOptions>(Configuration.GetSection("IpRateLimiting"));
-            services.Configure<IpRateLimitPolicies>(Configuration.GetSection("IpRateLimitPolicies"));
             services.AddInMemoryRateLimiting();
 
             services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
